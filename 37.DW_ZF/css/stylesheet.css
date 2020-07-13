@@ -1,0 +1,682 @@
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color: #f4f4f4;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*Global*/
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+.button{
+    height:38px;
+    background: #e8491d;
+    border:0;
+    padding-left:20px;
+    padding-right:20px;
+    color:#ffffff;
+}
+
+.tile{
+    color:#ffffff;
+    background: #35424a;
+    padding: 15px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+
+
+
+/*Header*/
+
+header{
+    background-color: #35424a;
+    color:#ffffff;
+    padding-top:30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:16px;
+}
+
+header li{
+    display:inline;
+    padding: 0 20px 0 20px;
+}
+
+header #introduction{
+    float:left;
+}
+
+header #introduction h1{
+    margin:0;
+}
+
+
+header nav{
+    float: right;
+    margin-top:10px;
+}
+
+header .current a{
+    color:#e8491d;
+    font-weight: bold;
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+}
+
+nav a.icon{
+    display:none;
+    margin-top: 0px;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: auto;
+    transition: 1s;
+    padding-top: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    height: 53px;
+    overflow: hidden;
+  
+}
+  
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+  
+/* Contact-info */
+.contact-info{
+    margin:0;
+    padding:0;
+    font-family: "montserrat", sans-serif;
+    box-sizing:border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width:100%;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+#contact-bgimage{
+    width:100%;
+    height: auto;
+    position: relative;
+}
+
+.cards{
+    padding:0;
+    font-family: "montserrat", sans-serif;
+    box-sizing:border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding:0 40px;
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+    position: absolute;
+}
+
+.card{
+    /*background: #35424a;*/
+    padding:0 20px;
+    margin:20px 10px;
+    width:30%;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 1vw;
+    
+}
+
+.card-icon{
+    font-size:3vw;
+    background:#e8491d;
+    width:7vw;
+    height:7vw;
+    text-align: center;
+    line-height: 7vw !important;
+    border-radius: 50%;
+    transition:0.3s linear;
+}
+
+.card:hover .card-icon{
+    background: none;
+    color: #e8491d;
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top:20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+
+}
+
+
+
+
+
+/* Slideshow */
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    font-family: 'Kalam', cursive;
+    padding-bottom: 0;
+    
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+
+}
+
+.mySlides.fade {
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides.fade img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Caption text  */
+.text {
+    color: #f2f2f2;
+    font-size: 2vw;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 2vw;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators /
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}*/
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+
+
+
+
+
+/* Showcase 
+
+#showcase{
+    min-height: 400px;
+    background:url('../images/sample3.jpg') no-repeat center -400px;
+    text-align: center;
+    color:#ffffff;
+}
+
+
+
+#showcase h2{
+    margin-top:150px;
+    margin-bottom:10px;
+    font-size:40px;
+}
+
+#showcase p{
+    font-size:20px;
+}
+*/
+
+
+
+
+
+
+/* Info */
+
+#info{
+    margin-top:-7px;
+    padding:15px;
+    color:#ffffff;
+    background: #35424a;
+}
+
+#info h2{
+    float:left;
+}
+
+#info form{
+    float:right;
+    margin-top:15px;
+}
+
+#info input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+}
+
+#info input[type="text"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+}
+
+
+
+
+
+
+/* Boxes */
+
+#boxes{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#boxes .box{
+    float:left;
+    text-align:center;
+    width:30%;
+    padding:10px;
+}
+
+#boxes .box img{
+    width:90px;
+    height: 110px;
+}
+
+
+/* Hero Intro*/
+#heroIntro{
+    background-image: url("/images/warsaw_bckg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    margin: 0;
+    padding: 0;
+}
+
+#biography{
+    margin-top: 25px;
+}
+
+/* Wędro Intro*/
+#wedroIntro{
+    background-image: url("/images/wędroIntro.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    margin: 0;
+    padding: 0;
+}
+
+/* About Us Intro*/
+#aboutusIntro{
+    background-image: url("/images/campfire.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Aside */
+aside.sidebar{
+    float:right;
+    width:30%;
+    margin-top:10px;
+}
+
+aside#image{
+    float:right;
+    width:40%;
+    margin-top:10px;
+    margin-bottom:20px;
+    
+}
+
+aside#image img{
+    width: 90%;
+    
+}
+
+aside#naramiennik{
+    float:right;
+    width:30%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+aside#naramiennik img{
+    width: 85%;
+    max-height: 600px;
+}
+
+aside#empty{
+    float:right;
+    width:30%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+#operations{
+    list-style-type: square;
+}
+
+#symbolika_elementow{
+    list-style-type: square;
+}
+
+/* Article */
+article#main-column{
+    float:left;
+    width:65%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+article#o_wedrownictwie{
+    float:left;
+    width:65%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+article#symbolika{
+    float:left;
+    width:65%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+article#dewiza_i_kodeks{
+    float:left;
+    width:65%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+article#hero{
+    float:left;
+    width:55%;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+/* Dwonload*/
+.download a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Map */
+#map{
+    background-color: #35424a;
+}
+
+.mapouter{
+    position: relative;
+    margin: 0 auto;
+    height:500px;
+    width:50vw;
+    padding-bottom: 25px;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    padding:20px;
+    margin-top:0px;
+    color:#ffffff;
+    background: #35424a;
+    text-align:center;
+    border-top: #e8491d 3px solid;
+    bottom:0;
+    
+}
+
+
+
+/* MediaQueries */
+@media(max-width:1300px){
+    header nav ul{
+        display: none;
+    }
+
+    header .container{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    header nav a.icon{
+        float: center;
+        display: block;
+        margin-top: -7px;
+          
+    }
+        
+}
+
+
+/* MediaQueries */
+@media(max-width:768px){
+    header #introduction,
+    header nav,
+    header nav li,
+    header nav #burger-bar,
+    #info h2,
+    #info form,
+    #boxes .box{
+        float:none;
+        text-align: center;
+        width:100%;
+    }
+
+    article#main-column,
+    article#o_wedrownictwie,
+    article#symbolika,
+    article#dewiza_i_kodeks,
+    article#hero,
+    aside.sidebar,
+    aside#image,
+    aside#naramiennik,
+    aside#empty
+    {
+        float:none;
+        text-align: left;
+        width:100%;
+    }
+
+    article#main-column h2,
+    aside#sidebar h3{
+        float:none;
+        text-align: center;
+        width:100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    header nav a.icon{
+        float: center;
+        display: block;
+        margin-top: 0px;
+          
+    }
+
+    
+          
+    
+
+    .text{
+        font-size: 2vw;
+    }
+
+    .contact-info{
+        flex-direction: column;
+    }
+
+    .mapouter{
+        position: relative;
+        margin: 0 auto;
+        height:500px;
+        width:100%;
+        padding-bottom: 25px;
+    }
+
+    
+
+    #info button{
+        display: block;
+        width:100%;
+        margin-bottom: 40px;
+    }
+
+    #info form input[type="email"],
+    #info form input[type="text"]{
+        width:100%;
+        margin-bottom: 5px;;
+    }
+}
+
+@media screen and (max-height: 450px) 
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
